@@ -15,7 +15,6 @@
                 <th>작성자</th>
             </tr>
         </thead>
-        <br><hr>
         <tbody>
         {% for post in post_list %}
             <tr>
@@ -26,6 +25,12 @@
         {% endfor %}
         </tbody>
     </table>
+
+    {% for page in total_page %}
+    <a {% if current_page != page %} style="font-color: black" href="?page={{ page }}" {% endif %}>
+        <span {% if current_page == page %} style="font-weight: bold" {% endif %}>{{ page }}</span>
+    </a>
+    {% endfor %}
 
 </body>
 </html>
