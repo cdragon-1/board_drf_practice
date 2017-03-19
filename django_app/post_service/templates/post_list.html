@@ -8,6 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello, World!</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <br><hr>
+        <tbody>
+        {% for post in post_list %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.body }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
 </body>
 </html>
