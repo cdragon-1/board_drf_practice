@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'post_service',
+    'user_manager',
     'rest_framework',
     'rest_framework_swagger',
 ]

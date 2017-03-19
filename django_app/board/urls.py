@@ -17,9 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from post_service import urls as psv_urls
+from user_manager import urls as um_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^board/', include(psv_urls)),
+    url(r'^user/', include(um_urls)),
 ]
 
